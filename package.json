@@ -1,0 +1,87 @@
+{
+  "name": "proxy-reducer",
+  "version": "1.0.0",
+  "description": "Using Proxy API to auto construct new State for Redux Reducer",
+  "keywords": [
+    "proxy",
+    "use-state",
+    "react",
+    "state",
+    "dispatch"
+  ],
+  "author": "Beeno Tung <aabbcc1241@yahoo.com.hk> (https://beeno-tung.surge.sh)",
+  "license": "BSD-2.0",
+  "main": "dist/cjs/proxy-reducer.js",
+  "types": "dist/cjs/proxy-reducer.d.ts",
+  "module": "dist/esm/proxy-reducer.js",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "preformat": "npm run restore",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "prestart": "node scripts/pre-start.js",
+    "start": "react-scripts start",
+    "restore": "node scripts/restore.js",
+    "clean": "rimraf dist",
+    "prebuild": "run-p clean format",
+    "build": "run-p build:cjs build:esm",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "use-state-proxy": "^1.1.0"
+  },
+  "peerDependencies": {
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.53",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-redux": "^7.1.16",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-redux": "^7.2.4",
+    "react-refresh": "^0.9.0",
+    "react-scripts": "4.0.1",
+    "redux": "^4.1.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.0.3",
+    "web-vitals": "^0.2.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beenotung/proxy-reducer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/beenotung/proxy-reducer/issues"
+  },
+  "homepage": "https://github.com/beenotung/proxy-reducer#readme"
+}
