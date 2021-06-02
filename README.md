@@ -50,6 +50,8 @@ In the `updater()`, you can get/set the values, and call mutating methods (e.g. 
 
 **Usage Example**:
 ```typescript jsx
+import { proxyReducer } from 'proxy-reducer'
+
 export const reducer = (state, action) => {
   return proxyReducer(state, state => {
     switch (action.type) {
